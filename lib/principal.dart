@@ -38,7 +38,11 @@ class Principal extends StatelessWidget {
               ),
               subtitle: Text("C.c. " + empleados[index]["ide"]),
               trailing: Text("Tel " + empleados[index]["telefono"]),
-              leading: Icon(Icons.person),
+              leading: Image(
+                image: NetworkImage(
+                  "https://attic.sh/ipi64p6p5s8t7x9diwsx13pldkuz",
+                ),
+              ),
             );
           },
         ),
