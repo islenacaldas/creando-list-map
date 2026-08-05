@@ -26,6 +26,15 @@ class Principal extends StatelessWidget {
           backgroundColor: Colors.green,
           foregroundColor: Colors.white,
         ),
+        body: ListView.separated(
+          itemCount: empleados.length,
+          separatorBuilder: (BuildContext context, int index) {
+            return Divider();
+          },
+          itemBuilder: (BuildContext context, int index) {
+            return Text(empleados[index]["nombre"]);
+          },
+        ),
       ),
     );
   }
