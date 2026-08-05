@@ -32,7 +32,9 @@ class Principal extends StatelessWidget {
             return Divider();
           },
           itemBuilder: (BuildContext context, int index) {
-            return Text(empleados[index]["nombre"]);
+            return Text(
+              empleados[index]["nombre"] + " " + empleados[index]["apellido"],
+            );
           },
         ),
       ),
