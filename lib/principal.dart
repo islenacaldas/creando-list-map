@@ -6,10 +6,29 @@ List<Map> empleados = [
     "nombre": "Fredy",
     "apellido": "hernandez",
     "telefono": "3172464503",
+    "foto": "url a colocar",
   },
-  {"ide": "234", "nombre": "Claudia", "apellido": "mejia", "telefono": "1234"},
-  {"ide": "345", "nombre": "pedro", "apellido": "perez", "telefono": "4567"},
-  {"ide": "456", "nombre": "Lucy", "apellido": "Vallejo", "telefono": "789"},
+  {
+    "ide": "234",
+    "nombre": "Claudia",
+    "apellido": "mejia",
+    "telefono": "1234",
+    "foto": "url a colocar",
+  },
+  {
+    "ide": "345",
+    "nombre": "pedro",
+    "apellido": "perez",
+    "telefono": "4567",
+    "foto": "https://attic.sh/ipi64p6p5s8t7x9diwsx13pldkuz ",
+  },
+  {
+    "ide": "456",
+    "nombre": "Lucy",
+    "apellido": "Vallejo",
+    "telefono": "789",
+    "foto": " url a colocar",
+  },
 ];
 
 class Principal extends StatelessWidget {
@@ -38,11 +57,7 @@ class Principal extends StatelessWidget {
               ),
               subtitle: Text("C.c. " + empleados[index]["ide"]),
               trailing: Text("Tel " + empleados[index]["telefono"]),
-              leading: Image(
-                image: NetworkImage(
-                  "https://attic.sh/ipi64p6p5s8t7x9diwsx13pldkuz",
-                ),
-              ),
+              leading: Image(image: NetworkImage(empleados[index]["foto"])),
             );
           },
         ),
